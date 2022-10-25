@@ -1,0 +1,1 @@
+A simple To-Do List built with Svelte. May or may not improve with time.
