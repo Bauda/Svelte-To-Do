@@ -1,4 +1,6 @@
 <script>
+  import logo from './assets/tasks_logo.png'
+
   let newToDo = '';
   let ToDoList = [
     {text: 'Fare la spesa', status: true},
@@ -20,6 +22,10 @@
     ToDoList = ToDoList;
   }
 </script>
+
+<div>
+  <img src={logo} class="logo" alt="Just Do It" />
+</div>
 
 <div>
   <input bind:value={newToDo} placeholder="Add an item" type="text">
@@ -78,8 +84,19 @@
     background-color: rgb(24, 3, 6);
     float:left;
   }
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    margin-top: -100em;
+    transition-duration: 700ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #4048ebaa);
+    transition-duration: 200ms;
+  }
   :disabled{
     opacity: 0.6;
     cursor: not-allowed;
+    border-color: rgba(0, 0, 0, 0); 
   }
 </style>
